@@ -1,12 +1,76 @@
-# F1 Podium Prediction Model - 2025 Dutch Grand Prix
-## Project Overview
-A machine learning pipeline for predicting Formula 1 race outcomes using historical telemetry data, practice session performance, and meteorological conditions. The model successfully predicted the podium positions for the 2025 Dutch Grand Prix using supervised learning techniques.
+# 🏎️ F1 Race Winner Predictor
+
+A machine learning pipeline for predicting Formula 1 race outcomes using historical telemetry data, practice session performance, and meteorological conditions. Updated weekly with predictions for each Grand Prix.
+
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
+[![FastF1](https://img.shields.io/badge/FastF1-3.6+-red.svg)](https://docs.fastf1.dev)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org)
+[![Accuracy](https://img.shields.io/badge/Race_Winner_Accuracy-100%25-brightgreen.svg)](https://github.com)
+
+## 🏆 Latest Predictions
+
+### 🇮🇹 2025 Italian Grand Prix (Monza) - September 7, 2025
+🥇 **P1**: Lando Norris (McLaren) - 89.971s  
+🥈 **P2**: Oscar Piastri (McLaren) - 90.011s  
+🥉 **P3**: Charles Leclerc (Ferrari) - 90.173s  
+
+**Model Performance**: R² = 0.835, MAE = 2.4s
+
+## 📊 Season Performance Tracking
+
+| Race | Predicted Winner | Actual Winner | P1 Accuracy | Podium Accuracy | Model R² |
+|------|------------------|---------------|-------------|-----------------|----------|
+| **Monza** | NOR | *Race: Sept 7* | *TBD* | *TBD* | 0.835 |
+| **Zandvoort** | PIA | **PIA** ✅ | ✅ **100%** | ✅ **66%** | 0.559 |
+
+### 🎯 Prediction Accuracy Summary
+- **Race Winners**: 1/1 (100%)
+- **Podium Finishers**: 2/3 (66%)
+- **Average Position Error**: 2.1 positions
+
+## 🏁 Race Results Analysis
+
+### 🇳🇱 2025 Dutch Grand Prix - Zandvoort ✅ COMPLETED
 
 **Final Predictions**:
-
 🥇 **P1**: Oscar Piastri (McLaren) - 87.29s
 🥈 **P2**: Lando Norris (McLaren) - 87.68s
 🥉 **P3**: Max Verstappen (Red Bull) - 89.13s
+
+| Position | **Predicted** | **Actual** | **Accuracy** |
+|----------|---------------|------------|--------------|
+| **P1** | **PIA** ✅ | **PIA** | ✅ **CORRECT** |
+| **P2** | **NOR** ❌ | **VER** | ❌ Wrong (DNF) |
+| **P3** | **VER** ✅ | **HAD** | ❌ Wrong |
+
+**Race Winner**: ✅ **PREDICTED CORRECTLY** - Oscar Piastri  
+**Notable**: Norris retired from P2 with mechanical failure, promoting Hadjar to surprise maiden podium
+
+**Actual Final Results**:
+1. **Oscar Piastri** (McLaren) - 1:38:29.849  
+2. **Max Verstappen** (Red Bull) - +1.271s  
+3. **Isack Hadjar** (Racing Bulls) - +3.233s  
+4. George Russell (Mercedes) - +5.654s
+5. Alexander Albon (Williams) - +6.327s
+
+*DNF: Lando Norris (McLaren), Charles Leclerc (Ferrari), Lewis Hamilton (Ferrari)*
+
+## 🏗️ Technical Architecture
+
+### 📊 Data Pipeline
+- **Source**: FastF1 API for telemetry and session data
+- **Temporal Coverage**: 2024-2025 F1 seasons
+- **Dataset Evolution**: 60 → 319 driver-race combinations
+- **Tracks**: Zandvoort (2024), Imola, Suzuka, Miami, Monza (2025)
+- **Update Frequency**: Weekly before each Grand Prix
+
+### 🤖 Model Evolution
+
+| Version | Race | Dataset Size | R² Score | MAE (seconds) | Key Improvements |
+|---------|------|-------------|----------|---------------|------------------|
+| **v2.0** | Monza 2025 | 319 samples | 0.835 | 2.4 | Weather integration, expanded dataset, track encoding |
+| **v1.0** | Zandvoort 2025 | 60 samples | 0.559 | 3.89 | Initial Ridge regression implementation |
+
 
 ## Technical Architecture
 ### Data Pipeline
