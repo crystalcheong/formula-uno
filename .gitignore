@@ -2,3 +2,5 @@ cache/
 .env
 README_test.md
 junk/
+prediction_notebooks/cache/
+scripts/cache/

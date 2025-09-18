@@ -1,0 +1,18 @@
+Track,FastF1_Name,Avg_Corner_Speed,Sample_Size,Downforce_Rank,Downforce_Category
+Spain,Barcelona,112.7695165945166,5,1.5,Very High DF
+Belgium,Spa,112.7695165945166,5,1.5,Very High DF
+Australia,Melbourne,108.3,5,3.0,Very High DF
+China,Shanghai,107.99292636510029,5,4.5,Very High DF
+Hungary,Budapest,107.99292636510029,5,4.5,Very High DF
+Silverstone,Silverstone,107.45974703557313,5,6.0,High DF
+Netherlands,Zandvoort,107.08444805194804,5,7.0,High DF
+Saudi Arabia,Jeddah,105.74012493354599,5,8.0,Medium DF
+Baku,Baku,103.61907248823691,5,9.0,Medium DF
+Miami,Miami,98.02863868711327,5,10.0,Medium DF
+Japan,Suzuka,95.09265372995321,5,11.0,Low DF
+Austria,Spielberg,94.65833333333333,5,12.0,Low DF
+Canada,Montreal,94.27298872031587,5,13.0,Low DF
+Imola,Imola,90.99176470588235,5,14.5,Very Low DF
+Monza,Monza,90.99176470588235,5,14.5,Very Low DF
+Bahrain,Bahrain,90.74882552498832,5,16.0,Very Low DF
+Monaco,Monaco,86.792213773534,5,17.0,Very Low DF
