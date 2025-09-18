@@ -235,13 +235,20 @@ Real-time Integration: Live telemetry incorporation during race weekends
 
 ## Repository Structure
 ```
-f1-podium-prediction/
-├── data/
-│   ├── raw/          # FastF1 cached data
-│   └── processed/    # Engineered features
-├── models/
-│   └── ridge_model.pkl
-├── src/
-│   ├── data_processing.py
-│   ├── feature_engineering.py
+f1-winner/
+├── data/ # Contains all the dataframes used for training models for each race
+│ 
+├── prediction_notebooks/ # Notebooks with detailed code for prediction
+│   ├── baku_prediction.ipynb
+│   ├── dutch_gp_prediction.ipynb
+│   ├── monza_prediction.ipynb  
+│   ...
+│ 
+├── scripts/ 
+│   └── categorise_by_downforce.py
+│
+├── venv/ # Environment folder
+│
+├──  README.md
+└── requirements.txt
 ```
