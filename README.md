@@ -130,7 +130,7 @@ Practice_vs_Quali_Rank = rank(CleanAirPace) - GridPosition
 
 **Model Comparison Results (Baku 2025)**:
 - **Linear Regression**: MAE = 2.182s, R² = 0.925
-- **Ridge Regression (α=7.0)**: MAE = 3.223s, R² = 0.876
+- **Ridge Regression (α=5.0)**: MAE = 3.223s, R² = 0.876
 
 **Why Linear Regression Won**: With expanded dataset, regularization actually hurt performance, suggesting feature set is well-suited to linear approach without complexity penalties.
 
