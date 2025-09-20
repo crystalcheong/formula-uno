@@ -94,7 +94,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 
 | Version | Race | Dataset Size | R² Score | MAE (seconds) | Key Improvements |
 |---------|------|-------------|----------|---------------|------------------|
-| **v3.0** | Baku 2025 | 400+ samples | 0.925 | 2.182 | Linear Regression optimization, selective normalization |
+| **v3.0** | Baku 2025 | 339 samples | 0.925 | 2.182 | Linear Regression optimization, selective normalization |
 | **v2.0** | Monza 2025 | 319 samples | 0.835 | 2.4 | Weather integration, expanded dataset, track encoding |
 | **v1.0** | Zandvoort 2025 | 60 samples | 0.559 | 3.89 | Initial Ridge regression implementation |
 
