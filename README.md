@@ -86,7 +86,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ### 📊 Data Pipeline
 - **Source**: FastF1 API for telemetry and session data
 - **Temporal Coverage**: 2024-2025 F1 seasons
-- **Dataset Evolution**: 60 → 319 → 400+ driver-race combinations
+- **Dataset Evolution**: 60 → 319 → 339 driver-race combinations
 - **Tracks**: Zandvoort (2024), Imola, Suzuka, Miami, Monza, Baku (2025)
 - **Update Frequency**: Weekly before each Grand Prix
 
@@ -104,7 +104,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 **Source**: FastF1 API for telemetry and session data  
 **Temporal Coverage**: 2024-2025 F1 seasons  
 **Tracks**: Baku (2024), All 2025 races so far 
-**Sample Size**: 350+ driver-race combinations
+**Sample Size**: 300+ driver-race combinations
 
 ## Feature Engineering
 ### Core Features
