@@ -103,13 +103,13 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 
 **Source**: FastF1 API for telemetry and session data  
 **Temporal Coverage**: 2024-2025 F1 seasons  
-**Tracks**: Zandvoort (2024), Imola, Suzuka, Miami, Monza, Baku (2025)  
-**Sample Size**: 400+ driver-race combinations
+**Tracks**: Baku (2024), All 2025 races so far 
+**Sample Size**: 350+ driver-race combinations
 
 ## Feature Engineering
 ### Core Features
 
-**Practice Pace Integration**: Best lap time across FP1/FP2/FP3 sessions with track status filtering  
+**Practice Pace Integration**: Best lap time across FP1/FP2/FP3 sessions
 **Grid Performance**: Qualifying position and gap to pole position  
 **Teammate Comparison**: Relative qualifying performance within teams  
 **Track Characteristics**: Downforce levels based on Hamilton's 2022 telemetry analysis
