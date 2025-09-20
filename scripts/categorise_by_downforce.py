@@ -264,4 +264,4 @@ if __name__ == "__main__":
         print("="*60)
         
     else:
-        print("No data collected - check internet connection")
+        print("Fzzzt.....Error........Check.....Internet.....Eurgh")
