@@ -5,30 +5,56 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![FastF1](https://img.shields.io/badge/FastF1-3.6+-red.svg)](https://docs.fastf1.dev)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org)
-[![Accuracy](https://img.shields.io/badge/Race_Winner_Accuracy-100%25-brightgreen.svg)](https://github.com)
+[![Accuracy](https://img.shields.io/badge/Race_Winner_Accuracy-50%25-yellow.svg)](https://github.com)
 
 ## 🏆 Latest Predictions
 
-### 🇮🇹 2025 Italian Grand Prix (Monza) - September 7, 2025
-🥇 **P1**: Lando Norris (McLaren) - 89.971s  
-🥈 **P2**: Oscar Piastri (McLaren) - 90.011s  
-🥉 **P3**: Charles Leclerc (Ferrari) - 90.173s  
+### 🇦🇿 2025 Azerbaijan Grand Prix (Baku) - September 21, 2025
+🥇 **P1**: Max Verstappen (Red Bull) - 159.84s  
+🥈 **P2**: George Russell (Mercedes) - 159.88s  
+🥉 **P3**: Yuki Tsunoda (Red Bull) - 160.22s  
 
-**Model Performance**: R² = 0.835, MAE = 2.4s
+**Model Performance**: R² = 0.925, MAE = 2.182s
+**Prediction**: Red Bull double podium with Verstappen leading
 
 ## 📊 Season Performance Tracking
 
 | Race | Predicted Winner | Actual Winner | P1 Accuracy | Podium Accuracy | Model R² |
 |------|------------------|---------------|-------------|-----------------|----------|
-| **Monza** | NOR | *Race: Sept 7* | *TBD* | *TBD* | 0.835 |
+| **Baku** | VER | *Race: Sept 21* | *TBD* | *TBD* | 0.925 |
+| **Monza** | NOR | **VER** ❌ | ❌ **0%** | ✅ **66%** | 0.835 |
 | **Zandvoort** | PIA | **PIA** ✅ | ✅ **100%** | ✅ **66%** | 0.559 |
 
 ### 🎯 Prediction Accuracy Summary
-- **Race Winners**: 1/1 (100%)
-- **Podium Finishers**: 2/3 (66%)
-- **Average Position Error**: 2.1 positions
+- **Race Winners**: 1/2 (50%)
+- **Podium Finishers**: 4/6 (66%)
+- **Average Position Error**: 2.3 positions
 
 ## 🏁 Race Results Analysis
+
+### 🇮🇹 2025 Italian Grand Prix - Monza ✅ COMPLETED
+
+**Final Predictions**:
+🥇 **P1**: Lando Norris (McLaren) - 89.971s
+🥈 **P2**: Oscar Piastri (McLaren) - 90.011s
+🥉 **P3**: Charles Leclerc (Ferrari) - 90.173s
+
+| Position | **Predicted** | **Actual** | **Accuracy** |
+|----------|---------------|------------|--------------|
+| **P1** | **NOR** ❌ | **VER** | ❌ **WRONG** |
+| **P2** | **PIA** ✅ | **NOR** | ❌ Wrong position |
+| **P3** | **LEC** ❌ | **PIA** | ❌ Wrong position |
+
+**Race Winner**: ❌ **PREDICTED INCORRECTLY** - Predicted Norris, actual winner was Verstappen  
+**Notable**: McLaren dominated practice but Verstappen converted pole position into victory after a dramatic start
+
+**Actual Final Results**:
+1. **Max Verstappen** (Red Bull) - Winner (from pole)
+2. **Lando Norris** (McLaren) - +19.649s  
+3. **Oscar Piastri** (McLaren) - +19.649s (team orders swap)
+4. Charles Leclerc (Ferrari)
+5. George Russell (Mercedes)
+6. Lewis Hamilton (Ferrari)
 
 ### 🇳🇱 2025 Dutch Grand Prix - Zandvoort ✅ COMPLETED
 
@@ -60,33 +86,33 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ### 📊 Data Pipeline
 - **Source**: FastF1 API for telemetry and session data
 - **Temporal Coverage**: 2024-2025 F1 seasons
-- **Dataset Evolution**: 60 → 319 driver-race combinations
-- **Tracks**: Zandvoort (2024), Imola, Suzuka, Miami, Monza (2025)
+- **Dataset Evolution**: 60 → 319 → 400+ driver-race combinations
+- **Tracks**: Zandvoort (2024), Imola, Suzuka, Miami, Monza, Baku (2025)
 - **Update Frequency**: Weekly before each Grand Prix
 
 ### 🤖 Model Evolution
 
 | Version | Race | Dataset Size | R² Score | MAE (seconds) | Key Improvements |
 |---------|------|-------------|----------|---------------|------------------|
+| **v3.0** | Baku 2025 | 400+ samples | 0.925 | 2.182 | Linear Regression optimization, selective normalization |
 | **v2.0** | Monza 2025 | 319 samples | 0.835 | 2.4 | Weather integration, expanded dataset, track encoding |
 | **v1.0** | Zandvoort 2025 | 60 samples | 0.559 | 3.89 | Initial Ridge regression implementation |
-
 
 ## Technical Architecture
 ### Data Pipeline
 
-Source: FastF1 API for telemetry and session data
-Temporal Coverage: 2024-2025 F1 seasons
-Tracks: Zandvoort (2024), Imola, Suzuka, Miami (2025)
-Sample Size: 60 driver-race combinations
+**Source**: FastF1 API for telemetry and session data  
+**Temporal Coverage**: 2024-2025 F1 seasons  
+**Tracks**: Zandvoort (2024), Imola, Suzuka, Miami, Monza, Baku (2025)  
+**Sample Size**: 400+ driver-race combinations
 
 ## Feature Engineering
 ### Core Features
 
-Clean Air Race Pace: Best lap time across FP1/FP2/FP3 sessions with track status filtering
-Grid Performance: Qualifying position and gap to pole position
-Teammate Comparison: Relative qualifying performance within teams
-Practice-to-Race Analysis: Practice session consistency and pace differentials
+**Practice Pace Integration**: Best lap time across FP1/FP2/FP3 sessions with track status filtering  
+**Grid Performance**: Qualifying position and gap to pole position  
+**Teammate Comparison**: Relative qualifying performance within teams  
+**Track Characteristics**: Downforce levels based on Hamilton's 2022 telemetry analysis
 
 ### Derived Features
 **Gap-based features**
@@ -103,135 +129,110 @@ Practice_vs_Quali_Rank = rank(CleanAirPace) - GridPosition
 
 ### Environmental Data
 
-Air temperature, humidity, atmospheric pressure
-Precipitation detection (boolean)
-Weather data integrated via OpenWeatherMap API
+**Weather Integration**: Air temperature, humidity, atmospheric pressure, precipitation detection  
+**Track-Specific Features**: Downforce categorization (5-tier system from Very High DF to Very Low DF)
 
 ## Model Development
 ### Algorithm Selection Process
 
-**Initial Exploration:** Deep Neural Networks, SVMs, XGBoost
+**Model Comparison Results (Baku 2025)**:
+- **Linear Regression**: MAE = 2.182s, R² = 0.925
+- **Ridge Regression (α=7.0)**: MAE = 3.223s, R² = 0.876
 
-**Issue:** Severe overfitting due to small dataset (n=60)
-CV Results: High variance (MAE: 8.4±4.0 seconds)
+**Why Linear Regression Won**: With expanded dataset, regularization actually hurt performance, suggesting feature set is well-suited to linear approach without complexity penalties.
 
+### Technical Improvements (v3.0)
 
-**Final Implementation:** Ridge Regression with L2 regularization
+**Downforce Classification**: Analyzed Hamilton's 2022 qualifying telemetry across 16 circuits, categorizing by maximum speeds (lower max speed = higher downforce requirements)
 
-Performance: Test MAE = 3.89 seconds, R² = 0.559
-Regularization: α = 1.0
+**Selective Normalization**: Applied Min-Max scaling only to continuous features while preserving categorical encodings for teams, drivers, and track characteristics
 
-
-
-## Model Validation
-
-Cross-Validation: 5-fold stratified CV
-Stability Analysis: Standard deviation monitoring
-Feature Importance: Coefficient magnitude analysis
+**Feature Engineering**: Driver-specific encoding to emphasize driver characteristics for certain track types
 
 ## Data Processing Pipeline
 
 ### Session Data Extraction
-
 ```
-def get_clean_air_race_pace(year, race):
+def get_best_race_pace(year, race):
     # Multi-session aggregation (FP1, FP2, FP3)
     # Track status filtering (green flag conditions only)
     # Personal best lap identification
     # Cross-session minimum selection
 ```
+## Data Quality Controls
 
-### Data Quality Controls
-
-Outlier detection and removal (Miami data corruption: 384s average lap times)
-Missing value imputation strategies
-Multicollinearity assessment and resolution
-
-## Results Analysis
-### Model Performance
-
-Ridge Regression MAE: 3.896 seconds
-Linear Regression MAE: 3.882 seconds
-Cross-Validation Stability: ±4.0 seconds standard deviation
-
-### Feature Importance (Ridge Regression)
-
-AirTemp: 2.13 (temperature impact on tire performance)
-Practice_Gap_to_Fastest: -1.87 (practice pace predictive power)
-CleanAirPace_seconds: 1.46 (baseline performance metric)
-Race_encoded: -1.07 (track-specific effects)
-TeamId_encoded: -0.62 (constructor performance differential)
+**Outlier Detection:** Removal of corrupted data and unrealistic lap times
+**Missing Value Strategy:** Imputation for weather data and track-specific features
+**Normalization Strategy:** Categorical columns preserved, continuous features Min-Max scaled
 
 ## Prediction Results
 
 ```
-Driver    Predicted_LapTime    Team
-PIA       87.286              McLaren
-NOR       87.683              McLaren  
-VER       89.132              Red Bull Racing
-HAD       89.594              Racing Bulls
-LAW       91.211              Racing Bulls
-RUS       91.339              Mercedes
-SAI       92.422              Williams
-TSU       92.946              Red Bull Racing
-LEC       92.983              Ferrari
-HAM       93.642              Ferrari
+Driver    Team
+VER       Red Bull Racing
+RUS       Mercedes  
+TSU       Red Bull Racing
+NOR       McLaren
+PIA       McLaren
+LEC       Ferrari
+LAW       Racing Bulls
+HAM       Ferrari
+ANT       Mercedes
+HAD       Racing Bulls
 ```
 
 ## Technical Challenges & Solutions
-### Rookie Driver Problem
 
-Challenge: No historical data for new drivers (ANT, BEA, COL)
-Solution: Track similarity analysis using medium-high downforce circuits as proxy data
+### Track Categorization
+
+Challenge: Capturing circuit-specific characteristics
+Solution: Systematic downforce analysis using historical telemetry data
 
 ### Data Scarcity
 
 Challenge: Limited sample size causing overfitting in complex models
-Solution: Regularized linear models with comprehensive cross-validation
+Solution: Linear models with selective preprocessing 
 
 ### Multicollinearity Issues
 
 Detection: Correlation matrix analysis (CleanAirPace vs WindSpeed: -0.987)
 Resolution: Feature selection and removal of redundant variables
 
-### Dependencies
-``` 
+## Dependencies
+```
 # Core libraries
 import fastf1
 import pandas as pd
 import numpy as np
 import sklearn
 
-#Specific modules
+# Specific modules
 from sklearn.linear_model import Ridge, LinearRegression
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder, MinMaxScaler
 from sklearn.model_selection import train_test_split, cross_val_score
 from sklearn.metrics import mean_absolute_error, r2_score
 ```
-
-### Usage
+## Usage
 ```
 # Install dependencies
 pip install fastf1 pandas scikit-learn requests matplotlib
-```
-```
-# Run prediction pipeline
-python dutch_gp_prediction.ipynb
-```
 
+# Run prediction pipeline
+python baku_gp_prediction.ipynb
+```
 ## Model Limitations
 
-Sample Size: 60 observations limit model complexity
-Temporal Scope: Limited to 2024-2025 seasons
-Weather Prediction: Relies on forecast data for race day conditions
-Track Variety: Limited circuit representation in training data
+Sample Density: Still building historical depth for certain track types
+Weather Dependency: Relies on forecast data for race day conditions
+Driver Transfers: Limited historical data for drivers in new teams
+Track Evolution: Circuit modifications and surface changes affect historical relevance
 
 ## Future Enhancements
 
-Data Expansion: Integration of additional historical seasons
-Feature Engineering: Tire strategy modeling, pit stop prediction
-Ensemble Methods: Model combination for improved stability
-Real-time Integration: Live telemetry incorporation during race weekends
+Ensemble Methods: Model combination once sufficient data prevents overfitting
+Tyre Strategy Integration: Compound selection and degradation modeling
+Real-time Integration: Live telemetry incorporation during race weekends if possible
+Feature Expansion: Pit stop prediction, safety car probability modeling
 
 ## Repository Structure
 ```
@@ -251,4 +252,3 @@ f1-winner/
 │
 ├──  README.md
 └── requirements.txt
-```
