@@ -35,7 +35,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ### 🇮🇹 2025 Italian Grand Prix - Monza ✅ COMPLETED
 
 **Final Predictions**:
-🥇 **P1**: Lando Norris (McLaren) - 89.971s
+🥇 **P1**: Lando Norris (McLaren) - 89.971s 
 🥈 **P2**: Oscar Piastri (McLaren) - 90.011s
 🥉 **P3**: Charles Leclerc (Ferrari) - 90.173s
 
