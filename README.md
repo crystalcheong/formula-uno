@@ -10,12 +10,12 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ## 🏆 Latest Predictions
 
 ### 🇦🇿 2025 Azerbaijan Grand Prix (Baku) - September 21, 2025
-🥇 **P1**: Max Verstappen (Red Bull) - 159.84s  
-🥈 **P2**: George Russell (Mercedes) - 159.88s  
-🥉 **P3**: Yuki Tsunoda (Red Bull) - 160.22s  
+🥇 **P1**: Max Verstappen (Red Bull) - 154.67s  
+🥈 **P2**: George Russell (Mercedes) - 155.08s  
+🥉 **P3**: Kimi Antonelli (Mercedes) - 155.09s  
 
 **Model Performance**: R² = 0.925, MAE = 2.182s
-**Prediction**: Red Bull double podium with Verstappen leading
+**Prediction**: Mercedes double podium with Verstappen leading
 
 ## 📊 Season Performance Tracking
 
