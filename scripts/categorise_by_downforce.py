@@ -24,7 +24,7 @@ tracks_with_rounds = {
     'Belgium': 14,
     'Netherlands': 15,
     'Monza': 16,  # Italian GP
-    'Singapore': 17,  # Not in your list
+    'Singapore': 17,  
     'Japan': 18
 }
 
