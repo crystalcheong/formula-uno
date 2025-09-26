@@ -45,6 +45,7 @@ wanted_tracks = {
     'Belgium': 14,
     'Netherlands': 15,
     'Monza': 16,
+    'Singapore': 17,  
     'Japan': 18
 }
 
