@@ -10,18 +10,19 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ## 🏆 Latest Predictions
 
 ### 🇸🇬 2025 Singapore Grand Prix - September 28, 2025
-🥇 **P1**: George Russell (Mercedes) - 124.38s
-🥈 **P2**: Oscar Piastri (McLaren) - 124.55s
-🥉 **P3**: Max Verstappen (Red Bull) - 124.99s
+- 🥇 **P1**: George Russell (Mercedes) - 124.38s
+- 🥈 **P2**: Oscar Piastri (McLaren) - 124.55s
+- 🥉 **P3**: Max Verstappen (Red Bull) - 124.99s
 
 **Model Performance**: R² = 0.908, MAE = 2.0s (Ridge Regression)
+
 **Prediction**: Russell to convert pole position into victory on Singapore's unforgiving street circuit
 
 ## 📊 Season Performance Tracking
 
 | Race | Predicted Winner | Actual Winner | P1 Accuracy | Podium Accuracy | Model R² |
 |------|------------------|---------------|-------------|-----------------|----------|
-| **Singapore** | RUS | *Race: Sept 28* | *TBD* | *TBD* | 0.908 |
+| **Singapore** | RUS | *Race: Oct 5th* | *TBD* | *TBD* | 0.908 |
 | **Baku** | VER | **VER** ✅ | ✅ **100%** | ✅ **66%** | 0.925 |
 | **Monza** | NOR | **VER** ❌ | ❌ **0%** | ✅ **66%** | 0.835 |
 | **Zandvoort** | PIA | **PIA** ✅ | ✅ **100%** | ✅ **66%** | 0.559 |
@@ -36,9 +37,9 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ### 🇦🇿 2025 Azerbaijan Grand Prix - Baku ✅ COMPLETED
 
 **Final Predictions**:
-🥇 **P1**: Max Verstappen (Red Bull) - 154.67s
-🥈 **P2**: George Russell (Mercedes) - 155.08s
-🥉 **P3**: Kimi Antonelli (Mercedes) - 155.09s
+- 🥇 **P1**: Max Verstappen (Red Bull) - 154.67s
+- 🥈 **P2**: George Russell (Mercedes) - 155.08s
+- 🥉 **P3**: Kimi Antonelli (Mercedes) - 155.09s
 
 | Position | **Predicted** | **Actual** | **Accuracy** |
 |----------|---------------|------------|--------------|
@@ -59,9 +60,9 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ### 🇮🇹 2025 Italian Grand Prix - Monza ✅ COMPLETED
 
 **Final Predictions**:
-🥇 **P1**: Lando Norris (McLaren) - 89.971s 
-🥈 **P2**: Oscar Piastri (McLaren) - 90.011s
-🥉 **P3**: Charles Leclerc (Ferrari) - 90.173s
+- 🥇 **P1**: Lando Norris (McLaren) - 89.971s 
+- 🥈 **P2**: Oscar Piastri (McLaren) - 90.011s
+- 🥉 **P3**: Charles Leclerc (Ferrari) - 90.173s
 
 | Position | **Predicted** | **Actual** | **Accuracy** |
 |----------|---------------|------------|--------------|
@@ -83,9 +84,9 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ### 🇳🇱 2025 Dutch Grand Prix - Zandvoort ✅ COMPLETED
 
 **Final Predictions**:
-🥇 **P1**: Oscar Piastri (McLaren) - 87.29s
-🥈 **P2**: Lando Norris (McLaren) - 87.68s
-🥉 **P3**: Max Verstappen (Red Bull) - 89.13s
+- 🥇 **P1**: Oscar Piastri (McLaren) - 87.29s
+- 🥈 **P2**: Lando Norris (McLaren) - 87.68s
+- 🥉 **P3**: Max Verstappen (Red Bull) - 89.13s
 
 | Position | **Predicted** | **Actual** | **Accuracy** |
 |----------|---------------|------------|--------------|
@@ -94,7 +95,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 | **P3** | **VER** ✅ | **HAD** | ❌ Wrong |
 
 **Race Winner**: ✅ **PREDICTED CORRECTLY** - Oscar Piastri  
-**Notable**: Norris retired from P2 with mechanical failure, promoting Hadjar to surprise maiden podium
+**Notable**: Norris retired from P2 with mechanical failure, promoting Hadjar to surprise maiden podium. Hadjar was P4 in my prediction.
 
 **Actual Final Results**:
 1. **Oscar Piastri** (McLaren) - 1:38:29.849  
@@ -118,6 +119,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 
 | Version | Race | Dataset Size | R² Score | MAE (seconds) | Key Improvements |
 |---------|------|-------------|----------|---------------|------------------|
+| **v4.0** | Singapore 2025 | 359 samples | 0.90 | 2.0 | Safety car feature engineering, position flexibility |
 | **v3.0** | Baku 2025 | 339 samples | 0.925 | 2.182 | Linear Regression optimization, selective normalization |
 | **v2.0** | Monza 2025 | 319 samples | 0.835 | 2.4 | Weather integration, expanded dataset, track encoding |
 | **v1.0** | Zandvoort 2025 | 60 samples | 0.559 | 3.89 | Initial Ridge regression implementation |
