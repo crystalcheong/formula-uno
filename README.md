@@ -5,32 +5,56 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![FastF1](https://img.shields.io/badge/FastF1-3.6+-red.svg)](https://docs.fastf1.dev)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org)
-[![Accuracy](https://img.shields.io/badge/Race_Winner_Accuracy-50%25-yellow.svg)](https://github.com)
+[![Accuracy](https://img.shields.io/badge/Race_Winner_Accuracy-67%25-green.svg)](https://github.com)
 
 ## 🏆 Latest Predictions
 
-### 🇦🇿 2025 Azerbaijan Grand Prix (Baku) - September 21, 2025
-🥇 **P1**: Max Verstappen (Red Bull) - 154.67s  
-🥈 **P2**: George Russell (Mercedes) - 155.08s  
-🥉 **P3**: Kimi Antonelli (Mercedes) - 155.09s  
+### 🇸🇬 2025 Singapore Grand Prix - September 28, 2025
+🥇 **P1**: George Russell (Mercedes) - 124.38s
+🥈 **P2**: Oscar Piastri (McLaren) - 124.55s
+🥉 **P3**: Max Verstappen (Red Bull) - 124.99s
 
-**Model Performance**: R² = 0.925, MAE = 2.182s
-**Prediction**: Mercedes double podium with Verstappen leading
+**Model Performance**: R² = 0.908, MAE = 2.0s (Ridge Regression)
+**Prediction**: Russell to convert pole position into victory on Singapore's unforgiving street circuit
 
 ## 📊 Season Performance Tracking
 
 | Race | Predicted Winner | Actual Winner | P1 Accuracy | Podium Accuracy | Model R² |
 |------|------------------|---------------|-------------|-----------------|----------|
-| **Baku** | VER | *Race: Sept 21* | *TBD* | *TBD* | 0.925 |
+| **Singapore** | RUS | *Race: Sept 28* | *TBD* | *TBD* | 0.908 |
+| **Baku** | VER | **VER** ✅ | ✅ **100%** | ✅ **66%** | 0.925 |
 | **Monza** | NOR | **VER** ❌ | ❌ **0%** | ✅ **66%** | 0.835 |
 | **Zandvoort** | PIA | **PIA** ✅ | ✅ **100%** | ✅ **66%** | 0.559 |
 
 ### 🎯 Prediction Accuracy Summary
-- **Race Winners**: 1/2 (50%)
-- **Podium Finishers**: 4/6 (66%)
-- **Average Position Error**: 2.3 positions
+- **Race Winners**: 2/3 (67%)
+- **Podium Finishers**: 6/9 (67%)
+- **Average Position Error**: 2.1 positions
 
 ## 🏁 Race Results Analysis
+
+### 🇦🇿 2025 Azerbaijan Grand Prix - Baku ✅ COMPLETED
+
+**Final Predictions**:
+🥇 **P1**: Max Verstappen (Red Bull) - 154.67s
+🥈 **P2**: George Russell (Mercedes) - 155.08s
+🥉 **P3**: Kimi Antonelli (Mercedes) - 155.09s
+
+| Position | **Predicted** | **Actual** | **Accuracy** |
+|----------|---------------|------------|--------------|
+| **P1** | **VER** ✅ | **VER** | ✅ **CORRECT** |
+| **P2** | **RUS** ✅ | **RUS** | ✅ **CORRECT** |
+| **P3** | **ANT** ❌ | **SAI** | ❌ Wrong |
+
+**Race Winner**: ✅ **PREDICTED CORRECTLY** - Max Verstappen
+**Notable**: Model correctly predicted top 2 finishers, showcasing strong performance on street circuits. Antonelli was behind Sainz by 2s at 4th place.
+
+**Actual Final Results**:
+1. **Max Verstappen** (Red Bull) - Winner
+2. **George Russell** (Mercedes)
+3. **Carlos Sainz** (Williams)
+4. Kimi Antonelli (Mercedes)
+5. Lando Norris (McLaren)
 
 ### 🇮🇹 2025 Italian Grand Prix - Monza ✅ COMPLETED
 
