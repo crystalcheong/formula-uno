@@ -9,7 +9,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 
 ## 🏆 Latest Predictions
 
-### 🇸🇬 2025 Singapore Grand Prix - September 28, 2025
+### 🇸🇬 2025 Singapore Grand Prix - October 05, 2025
 - 🥇 **P1**: George Russell (Mercedes) - 124.38s
 - 🥈 **P2**: Oscar Piastri (McLaren) - 124.55s
 - 🥉 **P3**: Max Verstappen (Red Bull) - 124.99s
