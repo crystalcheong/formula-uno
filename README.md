@@ -128,10 +128,10 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 ## Feature Engineering
 ### Core Features
 
-**Practice Pace Integration**: Best lap time across FP1/FP2/FP3 sessions
-**Grid Performance**: Qualifying position and gap to pole position  
-**Teammate Comparison**: Relative qualifying performance within teams  
-**Track Characteristics**: Downforce levels based on Hamilton's 2022 telemetry analysis
+- **Practice Pace Integration**: Best lap time across FP1/FP2/FP3 sessions
+- **Grid Performance**: Qualifying position and gap to pole position  
+- **Teammate Comparison**: Relative qualifying performance within teams  
+- **Track Characteristics**: Downforce levels based on Hamilton's 2022 telemetry analysis
 
 ### Derived Features
 **Gap-based features**
@@ -148,25 +148,22 @@ Practice_vs_Quali_Rank = rank(CleanAirPace) - GridPosition
 
 ### Environmental Data
 
-**Weather Integration**: Air temperature, humidity, atmospheric pressure, precipitation detection  
-**Track-Specific Features**: Downforce categorization (5-tier system from Very High DF to Very Low DF)
+- **Weather Integration**: Air temperature, humidity, atmospheric pressure, precipitation detection  
+- **Track-Specific Features**: Downforce categorization (5-tier system from Very High DF to Very Low DF)
 
 ## Model Development
 ### Algorithm Selection Process
 
 **Model Comparison Results (Baku 2025)**:
-- **Linear Regression**: MAE = 2.182s, R² = 0.925
-- **Ridge Regression (α=5.0)**: MAE = 3.223s, R² = 0.876
+- **Linear Regression**: MAE = 2.102s, R² = 0.904
+- **Ridge Regression (α=5.0)**: MAE = 2.074s, R² = 0.909
 
-**Why Linear Regression Won**: With expanded dataset, regularization actually hurt performance, suggesting feature set is well-suited to linear approach without complexity penalties.
 
-### Technical Improvements (v3.0)
+**Why Ridge Regression Won**: With expanded dataset, using XGBoost made manual feature weighing difficult, suggesting feature set is well-suited to linear approach without complexity penalties.
 
-**Downforce Classification**: Analyzed Hamilton's 2022 qualifying telemetry across 16 circuits, categorizing by maximum speeds (lower max speed = higher downforce requirements)
+### Technical Improvements (v4.0)
 
-**Selective Normalization**: Applied Min-Max scaling only to continuous features while preserving categorical encodings for teams, drivers, and track characteristics
-
-**Feature Engineering**: Driver-specific encoding to emphasize driver characteristics for certain track types
+- **Feature Engineering**: Added Position Flexibility factor by calculating average positions lost or gained over the last 5 races.
 
 ## Data Processing Pipeline
 
