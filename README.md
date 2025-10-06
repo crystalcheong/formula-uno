@@ -33,6 +33,21 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 - **Average Position Error**: 2.1 positions
 
 ## 🏁 Race Results Analysis
+### 🇸🇬 2025 Singapore Grand Prix ✅ COMPLETED
+
+**Final Predictions**:
+- 🥇 **P1**: George Russell (Mercedes) - 124.38s
+- 🥈 **P2**: Oscar Piastri (McLaren) - 124.55s
+- 🥉 **P3**: Max Verstappen (Red Bull) - 124.99s
+
+| Position | **Predicted** | **Actual** | **Accuracy** |
+|----------|---------------|------------|--------------|
+| **P1** | **RUS** ✅ | **RUS** | ✅ **CORRECT** |
+| **P2** | **VER** ❌ | **PIA** | ❌ Wrong |
+| **P3** | **NOR** ❌ | **VER** | ❌ Wrong |
+
+**Race Winner**: ✅ **PREDICTED CORRECTLY** - George Russell
+**Notable**: Model correctly predicted the winner. Piastri was 4th in the actual race. 2/3 of the podium finishers were predicted correctly.
 
 ### 🇦🇿 2025 Azerbaijan Grand Prix - Baku ✅ COMPLETED
 
