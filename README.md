@@ -5,7 +5,7 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 [![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://python.org)
 [![FastF1](https://img.shields.io/badge/FastF1-3.6+-red.svg)](https://docs.fastf1.dev)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-1.3+-orange.svg)](https://scikit-learn.org)
-[![Accuracy](https://img.shields.io/badge/Race_Winner_Accuracy-75%25-darkgreen.svg)](https://github.com)
+[![Accuracy](https://img.shields.io/badge/Race_Winner_Accuracy-75%25-forestgreen.svg)](https://github.com)
 
 ## 🏆 Latest Predictions
 
