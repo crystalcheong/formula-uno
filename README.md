@@ -22,14 +22,14 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 
 | Race | Predicted Winner | Actual Winner | P1 Accuracy | Podium Accuracy | Model R² |
 |------|------------------|---------------|-------------|-----------------|----------|
-| **Singapore** | RUS | *Race: Oct 5th* | *TBD* | *TBD* | 0.908 |
+| **Singapore** | RUS | **RUS** ✅ | ✅ **100%** | ✅ **66%**  | 0.908 |
 | **Baku** | VER | **VER** ✅ | ✅ **100%** | ✅ **66%** | 0.925 |
 | **Monza** | NOR | **VER** ❌ | ❌ **0%** | ✅ **66%** | 0.835 |
 | **Zandvoort** | PIA | **PIA** ✅ | ✅ **100%** | ✅ **66%** | 0.559 |
 
 ### 🎯 Prediction Accuracy Summary
-- **Race Winners**: 2/3 (67%)
-- **Podium Finishers**: 6/9 (67%)
+- **Race Winners**: 3/4 (75%)
+- **Podium Finishers**: 9/12 (67%)
 - **Average Position Error**: 2.1 positions
 
 ## 🏁 Race Results Analysis
@@ -177,42 +177,51 @@ def get_best_race_pace(year, race):
 ```
 ## Data Quality Controls
 
-**Outlier Detection:** Removal of corrupted data and unrealistic lap times
-**Missing Value Strategy:** Imputation for weather data and track-specific features
-**Normalization Strategy:** Categorical columns preserved, continuous features Min-Max scaled
+- **Outlier Detection:** Removal of corrupted data and unrealistic lap times
+- **Missing Value Strategy:** Imputation for weather data and track-specific features
+- **Normalization Strategy:** Categorical columns preserved, continuous features Min-Max scaled
 
-## Prediction Results
+## Complete Prediction Results (Singapore GP)
 
 ```
-Driver    Team
-VER       Red Bull Racing
-RUS       Mercedes  
-TSU       Red Bull Racing
-NOR       McLaren
-PIA       McLaren
-LEC       Ferrari
-LAW       Racing Bulls
-HAM       Ferrari
-ANT       Mercedes
-HAD       Racing Bulls
+RUS         124.155429
+PIA         124.329632
+VER         124.766341
+ANT         124.936092
+NOR         125.086558
+HAM         125.407224
+LEC         125.766541
+LAW         126.243674
+HAD         126.561356
+ALO         127.488472
+BEA         127.602225
+HUL         127.733188
+SAI         127.964576
+TSU         128.119668
+ALB         128.406562
+STR         128.519824
+GAS         128.949070
+BOR         129.189293
+COL         129.203600
+OCO         129.248415  
 ```
 
 ## Technical Challenges & Solutions
 
 ### Track Categorization
 
-Challenge: Capturing circuit-specific characteristics
-Solution: Systematic downforce analysis using historical telemetry data
+- Challenge: Capturing circuit-specific characteristics
+- Solution: Systematic downforce analysis using historical telemetry data
 
 ### Data Scarcity
 
-Challenge: Limited sample size causing overfitting in complex models
-Solution: Linear models with selective preprocessing 
+- Challenge: Limited sample size causing overfitting in complex models
+- Solution: Linear models with selective preprocessing 
 
 ### Multicollinearity Issues
 
-Detection: Correlation matrix analysis (CleanAirPace vs WindSpeed: -0.987)
-Resolution: Feature selection and removal of redundant variables
+- Detection: Correlation matrix analysis (CleanAirPace vs WindSpeed: -0.987)
+- Resolution: Feature selection and removal of redundant variables
 
 ## Dependencies
 ```
@@ -238,17 +247,17 @@ python baku_gp_prediction.ipynb
 ```
 ## Model Limitations
 
-Sample Density: Still building historical depth for certain track types
-Weather Dependency: Relies on forecast data for race day conditions
-Driver Transfers: Limited historical data for drivers in new teams
-Track Evolution: Circuit modifications and surface changes affect historical relevance
+- Sample Density: Still building historical depth for certain track types
+- Weather Dependency: Relies on forecast data for race day conditions
+- Driver Transfers: Limited historical data for drivers in new teams
+- Track Evolution: Circuit modifications and surface changes affect historical relevance
 
 ## Future Enhancements
 
-Ensemble Methods: Model combination once sufficient data prevents overfitting
-Tyre Strategy Integration: Compound selection and degradation modeling
-Real-time Integration: Live telemetry incorporation during race weekends if possible
-Feature Expansion: Pit stop prediction, safety car probability modeling
+- Ensemble Methods: Model combination once sufficient data prevents overfitting
+- Tyre Strategy Integration: Compound selection and degradation modeling
+- Real-time Integration: Live telemetry incorporation during race weekends if possible
+- Feature Expansion: Pit stop prediction, safety car probability modeling
 
 ## Repository Structure
 ```
@@ -258,10 +267,12 @@ f1-winner/
 ├── prediction_notebooks/ # Notebooks with detailed code for prediction
 │   ├── baku_prediction.ipynb
 │   ├── dutch_gp_prediction.ipynb
-│   ├── monza_prediction.ipynb  
+│   ├── monza_prediction.ipynb
+│   ├── singapore_prediction.ipynb
 │   ...
 │ 
-├── scripts/ 
+├── scripts/
+│   ├── pos_flexibility_calculation.py
 │   └── categorise_by_downforce.py
 │
 ├── venv/ # Environment folder
