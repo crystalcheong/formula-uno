@@ -43,8 +43,8 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 | Position | **Predicted** | **Actual** | **Accuracy** |
 |----------|---------------|------------|--------------|
 | **P1** | **RUS** ✅ | **RUS** | ✅ **CORRECT** |
-| **P2** | **VER** ❌ | **PIA** | ❌ Wrong |
-| **P3** | **NOR** ❌ | **VER** | ❌ Wrong |
+| **P2** | **PIA** ❌ | **VER** | ❌ Wrong |
+| **P3** | **VER** ❌ | **NOR** | ❌ Wrong |
 
 **Race Winner**: ✅ **PREDICTED CORRECTLY** - George Russell
 **Notable**: Model correctly predicted the winner. Piastri was 4th in the actual race. 2/3 of the podium finishers were predicted correctly.
