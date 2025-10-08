@@ -25,7 +25,8 @@ tracks_with_rounds = {
     'Netherlands': 15,
     'Monza': 16,  # Italian GP
     'Singapore': 17,  
-    'Japan': 18
+    'Japan': 18,
+    'United States':19
 }
 
 # Keep only the tracks you want to analyze
@@ -46,7 +47,8 @@ wanted_tracks = {
     'Netherlands': 15,
     'Monza': 16,
     'Singapore': 17,  
-    'Japan': 18
+    'Japan': 18,
+    'United States':19
 }
 
 tracks_with_rounds = wanted_tracks
@@ -212,7 +214,7 @@ if __name__ == "__main__":
         
         # Create mapping for your dataframe
         print("\n" + "="*60)
-        print("MAPPING FOR YOUR TRAINING DATA")
+        print("MAPPING FOR TRAINING DATA")
         print("="*60)
         
         # Map back to your original track names (most are already correct)
