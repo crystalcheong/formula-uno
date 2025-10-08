@@ -49,6 +49,6 @@ def calculate_driver_flexibility(year, race_rounds):
     return result
 
 if __name__ == "__main__":
-    flexibility = calculate_driver_flexibility(2025, ['Baku', 'Monza', 'Zandvoort', 'Hungary', 'Belgium'])
+    flexibility = calculate_driver_flexibility(2025, ['Singapore','Baku', 'Monza', 'Zandvoort', 'Hungary'])
     print("================================FINAL RESULTS FOR DRIVER POSITION FLEXIBILITY================================\n",flexibility)
     
