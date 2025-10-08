@@ -9,7 +9,8 @@ A machine learning pipeline for predicting Formula 1 race outcomes using histori
 
 ## 🏆 Latest Predictions
 
-🛠️ 🚧 🏗️ UNDER CONSTRUCTION: US GP PREDICTION NOTEBOOK (Kindly ignore changes made to the notebook until 20 October 🏗️ 🚧 🛠️
+### 🛠️ 🚧 🏗️ **UNDER CONSTRUCTION** 🏗️ 🚧 🛠️
+US GP Prediction Notebook (Kindly ignore changes made to the notebook until 20 October!!
 
 ## 📊 Season Performance Tracking
 
