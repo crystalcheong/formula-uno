@@ -291,4 +291,4 @@ f1-winner/
 ```
 
 # Licensing
-This work **intentionally** has no license. This means that it is under exclusive copyright by default. For more information about licensing on Github click (here)[https://github.com/tanvi-jain3/f1-winner] 
+This work **intentionally** has no license. This means that it is under exclusive copyright by default. For more information about licensing on Github click [here](https://choosealicense.com/no-permission/)
