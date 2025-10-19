@@ -288,3 +288,7 @@ f1-winner/
 │
 ├──  README.md
 └── requirements.txt
+```
+
+# Licensing
+This work **intentionally** has no license. This means that it is under exclusive copyright by default. For more information about licensing on Github click (here)[https://github.com/tanvi-jain3/f1-winner] 
