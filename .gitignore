@@ -4,13 +4,3 @@ README_test.md
 junk/
 prediction_notebooks/cache/
 scripts/cache/
-quick_fixes.py
-DATA_SCIENCE_BEST_PRACTICES.md
-CHECKLIST_BEFORE_RUNNING.md
-IMPLEMENTATION_SUMMARY.md
-TRACK_SPECIFIC_MODELS_SUMMARY.md
-track_specific_training_cell.py
-CHANGES_SUMMARY.md
-usgp_predict_standalone.py
-fix_gridpos_encoding.py
-remove_quali_feature.py
